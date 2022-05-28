@@ -11,6 +11,11 @@ Description: This is a project to check about house price data in the UK.
 # Python Libraries for handling numeric computation and dataframes
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import matplotlib
+matplotlib.style.use("ggplot")
+import calendar
 
 
 
@@ -63,11 +68,38 @@ else:
 #
 ########
 # Note: The file is 54MB+ in size
+# Just in case you want it here is a call to the repo
 # df = pd.read_csv("https://github.com/Mherstik/COMP6004pub/raw/main/UK-HPI-full-file-2021-04.csv")
+########
 
 df = pd.read_csv("UK-HPI-full-file-2021-04.csv")
 
 # Checking basic dataset information, such as data types and dimensions, etc.
 
 df.info()
-df.shape()
+# df.shape()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
