@@ -76,8 +76,8 @@ df = pd.read_csv("UK-HPI-full-file-2021-04.csv")
 
 # Checking basic dataset information, such as data types and dimensions, etc.
 
-df.info()
-# df.shape()
+print(df.info())
+print(df.shape)
 
 
 
