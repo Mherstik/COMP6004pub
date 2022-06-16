@@ -22,8 +22,12 @@ import calendar
 # Reading the data in a variable
 # The data is stored in personal Github repository
 # https://github.com/Mherstik/COMP6004pub/raw/main/UK-HPI-full-file-2021-04.csv
-
 ########
+# Note: The file is 54MB+ in size
+# Just in case you want it here is a call to the repo
+# 
+# df = pd.read_csv("https://github.com/Mherstik/COMP6004pub/raw/main/UK-HPI-full-file-2021-04.csv")
+#
 #
 # # Consider downloading and saving to local
 from urllib import request
@@ -36,12 +40,6 @@ local_file = 'UK-HPI-full-file-2021-04.csv'
 
 my_dir = '.'# enter the dir name
 file_exists = os.path.exists(local_file)
-# print(file_exists)
-# for fname in os.listdir(my_dir):
-#     if fname.startswith("UK-HPI-full-file"):
-#         print("File exists")
-#         break
-#     else: 
 
 class DownloadProgressBar(tqdm):
     def update_to(self, b=1, bsize=1, tsize=None):
@@ -65,12 +63,12 @@ if file_exists == False:
             print("Not downloaded.")
 else:
     print("File exists")
+
 #
-########
-# Note: The file is 54MB+ in size
-# Just in case you want it here is a call to the repo
-# df = pd.read_csv("https://github.com/Mherstik/COMP6004pub/raw/main/UK-HPI-full-file-2021-04.csv")
-########
+# End file import 
+#
+#########
+
 
 df = pd.read_csv("UK-HPI-full-file-2021-04.csv")
 
@@ -80,6 +78,10 @@ print(df.info())
 print(df.shape)
 
 
+## let's find null values
+print(df.isnull().sum())
+
+## 
 
 
 
